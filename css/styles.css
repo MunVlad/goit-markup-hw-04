@@ -439,9 +439,8 @@ img {
 }
 .client-link {
   display: flex;
-  display: inline-grid;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
@@ -450,11 +449,13 @@ img {
 .client-icon {
   fill: var(--icon-color);
 }
-.client-link:hover .client-icon {
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
   border-color: var(--accent-color);
   fill: var(--accent-color);
 }
-.client-link:hover {
+.client-link:hover,
+.client-link:focus {
   border-color: var(--accent-color);
 }
 
@@ -503,7 +504,13 @@ img {
   width: 370px;
   background: var(--main-background-color);
 }
-.portfolio-item:hover {
+.portfolio-link {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -522,12 +529,10 @@ img {
 }
 .portfolio-img {
   margin: 0px;
-  /* margin-bottom: 20px; */
-}
+  }
 .item-title {
   margin-top: 0px;
   margin-bottom: 4px;
-  /* margin-left: 24px; */
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
@@ -535,8 +540,6 @@ img {
 }
 .item-description {
   margin: 0px;
-  /* margin-bottom: 20px;
-  margin-left: 24px; */
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
