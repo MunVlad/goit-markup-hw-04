@@ -13,6 +13,7 @@ html {
   --main-textcolor: #212121;
   --second-textcolor: #757575;
   --font-family: "Roboto", sans-serif;
+  --icon-color: #AFB1B8;
 }
 
 body {
@@ -101,7 +102,8 @@ body {
   margin-left: 50px;
 }
 .contact {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   padding: 10px;
   font-weight: 500;
   font-size: 14px;
@@ -123,6 +125,52 @@ body {
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.main-footer{
+  display: flex;
+  align-items: baseline;
+ }
+.footer-medialist{
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  /* list-style: none; */
+}
+.footer-link {
+  margin-left: 70px;
+  /* padding-top: 10px; */
+}
+.footer-link h3{
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+}
+.link-icon{
+  display: flex;
+  display: inline-grid;
+  align-items: center;
+  justify-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-medialist .item:not(:last-child){
+  margin-right: 10px;
+}
+.footer-icon{
+  fill: var(--main-background-color);
+}
+.link-icon:hover,
+.link-icon:focus{
+  background-color: var(--accent-color);
 }
 .address-link {
   margin-bottom: 9px;
@@ -176,9 +224,16 @@ body {
 /* Шапка */
 .hero {
   background-color: #2f303a;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/heroimage.jpg);
   text-align: center;
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 200px;  
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto; 
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-title {
   margin-top: 0px;
@@ -213,6 +268,9 @@ body {
 }
 .features-list {
   display: flex;
+}
+.features-item {
+  width: 270px;
 }
 .features-item:not(:last-child) {
   margin-right: 30px;
@@ -286,7 +344,7 @@ img {
 }
 .team p {
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -312,6 +370,77 @@ img {
   padding-bottom: 30px;
   padding-top: 30px;
 }
+.team-mainlink{
+  display: inline-flex;
+}
+.team-medialist{
+  display: flex;
+}
+.team-medialist > .item:not(:last-child){
+  margin-right: 10px;
+}
+.team-medialist .team-link{
+      width: 44px;
+        height: 44px;
+        align-items: center;
+        display: flex;
+        justify-items: center;
+        background-color: var(--main-background-color);
+        border-radius: 50%;
+        border: 1px solid red;
+}
+.team-icon {
+  fill: var(--icon-color);
+}
+.team-link:hover .team-icon{
+  fill: var(--main-background-color);
+}
+.team-link:hover{
+  background-color: var(--accent-color);
+}
+
+
+/* Постійні клієнти */
+.client{
+  background-color: var(--main-background-color);
+}
+.client h2{
+  margin-bottom: 50px;
+  margin-top: 0px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.client-list{
+  display: flex;
+  justify-content: center;
+}
+.client-list .item:not(:last-child){
+  margin-right: 30px;
+}
+.client-link{
+  display: flex;
+  display: inline-grid;
+  align-items: center;
+  justify-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+.client-icon{
+  fill: var(--icon-color);
+}
+.client-link:hover .client-icon{
+  border-color: var(--accent-color);
+  fill: var(--accent-color)
+}
+.client-link:hover {
+  border-color: var(--accent-color);
+}
+
 /* Друга сторінка сайту */
 
 .portfolio {
@@ -353,6 +482,10 @@ img {
   width: 370px;
   background: var(--main-background-color);
 }
+/* .portfolio-item:hover,
+.portfolio-item:focus {
+  background-color: var(--accent-color)
+} */
 .portfolio-item:nth-child(3n + 3) {
   margin-right: 0px;
 }
